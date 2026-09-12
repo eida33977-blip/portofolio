@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Youssef Ahmed | Web Developer & Designer</title>
+  <meta name="description" content="Youssef Ahmed — Web Developer creating modern, responsive websites for businesses.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #080808;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: 1150px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      padding: 28px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .logo b {
+      color: #c7ff3d;
+    }
+
+    .links {
+      display: flex;
+      gap: 25px;
+      color: #aaa;
+    }
+
+    .links a:hover {
+      color: #c7ff3d;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 65px;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .tag {
+      color: #c7ff3d;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: 0.9;
+      margin: 18px 0;
+      letter-spacing: -5px;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 21px;
+      border-radius: 30px;
+      background: #c7ff3d;
+      color: #111;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .photo {
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid #292929;
+      background: #111;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      object-position: center 24%;
+      display: block;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    h2 {
+      font-size: 48px;
+      letter-spacing: -2px;
+      margin-top: 15px;
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid #292929;
+      background: #141414;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #c7ff3d;
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 370px;
+      border: 0;
+      background: #fff;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content small {
+      color: #c7ff3d;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .card-content h3 {
+      font-size: 28px;
+      margin: 9px 0 15px;
+    }
+
+    .card-content a {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-content a:hover {
+      color: #c7ff3d;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about p {
+      color: #aaa;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .skill {
+      padding: 10px 15px;
+      border: 1px solid #333;
+      border-radius: 30px;
+      color: #bbb;
+    }
+
+    .contact-box {
+      padding: 55px;
+      border-radius: 30px;
+      background: #141414;
+      border: 1px solid #292929;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 30px 0;
+      color: #777;
+      border-top: 1px solid #222;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 0;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .links {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .photo img {
+        height: 460px;
+      }
+
+      .contact-box {
+        padding: 35px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="logo">
+        YOUSSEF<b>.</b>AHMED
+      </div>
+
+      <div class="links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero">
+
+      <div>
+        <div class="tag">
+          Web Developer
+        </div>
+
+        <h1>
+          Digital work
+          <br>
+          with <span style="color:#c7ff3d;">impact.</span>
+        </h1>
+
+        <p>
+          I build modern, responsive websites for businesses
+          with clean design, clear messaging, and strong calls to action.
+        </p>
+
+        <a
+          class="btn"
+          href="https://wa.me/201033359958"
+          target="_blank"
+        >
+          WhatsApp Me
+        </a>
+      </div>
+
+
+      <!-- PROFILE IMAGE -->
+      <div class="photo">
+        <img
+          src="profile.jfif"
+          alt="Youssef Ahmed"
+        >
+      </div>
+
+    </header>
+
+
+    <!-- WORK -->
+    <section id="work">
+
+      <div class="tag">
+        Portfolio
+      </div>
+
+      <h2>
+        Selected Work
+      </h2>
+
+
+      <div class="grid">
+
+
+        <!-- PROJECT 1 -->
+        <article class="card">
+
+          <iframe
+            src="https://eida33977-blip.github.io/-1/"
+            loading="lazy"
+            title="Elevate Fitness"
+          ></iframe>
+
+          <div class="card-content">
+
+            <small>
+              LIVE PROJECT
+            </small>
+
+            <h3>
+              Elevate Fitness
+            </h3>
+
+            <a
+              href="https://eida33977-blip.github.io/-1/"
+              target="_blank"
+            >
+              Open Website ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+        <article class="card">
+
+          <iframe
+            src="https://eida33977-blip.github.io/-2/"
+            loading="lazy"
+            title="PureHome"
+          ></iframe>
+
+          <div class="card-content">
+
+            <small>
+              LIVE PROJECT
+            </small>
+
+            <h3>
+              PureHome
+            </h3>
+
+            <a
+              href="https://eida33977-blip.github.io/-2/"
+              target="_blank"
+            >
+              Open Website ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+        <article class="card">
+
+          <iframe
+            src="https://eida33977-blip.github.io/-7/"
+            loading="lazy"
+            title="The Cut"
+          ></iframe>
+
+          <div class="card-content">
+
+            <small>
+              LIVE PROJECT
+            </small>
+
+            <h3>
+              The Cut
+            </h3>
+
+            <a
+              href="https://eida33977-blip.github.io/-7/"
+              target="_blank"
+            >
+              Open Website ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 4 -->
+        <article class="card">
+
+          <iframe
+            src="https://eida33977-blip.github.io/-8/"
+            loading="lazy"
+            title="Urban Bean"
+          ></iframe>
+
+          <div class="card-content">
+
+            <small>
+              LIVE PROJECT
+            </small>
+
+            <h3>
+              Urban Bean
+            </h3>
+
+            <a
+              href="https://eida33977-blip.github.io/-8/"
+              target="_blank"
+            >
+              Open Website ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 5 -->
+        <article class="card">
+
+          <iframe
+            src="https://eida33977-blip.github.io/-/"
+            loading="lazy"
+            title="Prime Care"
+          ></iframe>
+
+          <div class="card-content">
+
+            <small>
+              LIVE PROJECT
+            </small>
+
+            <h3>
+              Prime Care
+            </h3>
+
+            <a
+              href="https://eida33977-blip.github.io/-/"
+              target="_blank"
+            >
+              Open Website ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+      <div class="about">
+
+        <div>
+
+          <div class="tag">
+            About Me
+          </div>
+
+          <h2>
+            Building websites that businesses can use.
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <p>
+            I'm Youssef Ahmed, a Web Developer focused on creating
+            modern and responsive websites for businesses.
+          </p>
+
+          <div class="skills">
+
+            <span class="skill">
+              HTML
+            </span>
+
+            <span class="skill">
+              CSS
+            </span>
+
+            <span class="skill">
+              JavaScript
+            </span>
+
+            <span class="skill">
+              Responsive Design
+            </span>
+
+            <span class="skill">
+              UI Design
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+      <div class="contact-box">
+
+        <div class="tag">
+          Contact
+        </div>
+
+        <h2>
+          Let's build something.
+        </h2>
+
+        <p>
+          WhatsApp: 01033359958
+          <br>
+          Email: youssefahmed33977@gmail.com
+        </p>
+
+
+        <a
+          class="btn"
+          href="https://wa.me/201033359958"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+
+
+        <a
+          class="btn"
+          href="mailto:youssefahmed33977@gmail.com"
+        >
+          Email
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      © 2026 Youssef Ahmed — Web Developer
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
